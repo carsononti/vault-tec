@@ -7,6 +7,20 @@
     <!-- Google Fonts import for Press Start 2P -->
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <style>
+        @keyframes bobbing {
+            0%, 100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        .bobbing {
+            animation: bobbing 2s ease-in-out infinite;
+        }
+
         html, body {
             height: 100%;
             margin: 0;
@@ -118,6 +132,7 @@
     <header>
         <img src="https://preview.redd.it/a-basic-vault-tec-vault-boy-badge-i-made-years-ago-877x616-v0-dfdunqs9lgyc1.png?width=640&crop=smart&auto=webp&s=1e99e123d6fef39feb40c472e9852ba3794f6731"
              alt="Vault Boy"
+             class="bobbing"
              style="max-width: 300px; height: auto;" />
         <h1>RAD-AWAY™ DISPENSARY</h1>
         <div class="tagline">Vault-Tec approved. Wasteland ready. Radiation doesn’t stand a chance.</div>
