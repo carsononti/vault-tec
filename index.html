@@ -107,7 +107,8 @@
                 background-color: #ffe066;
             }
 
-            .btn:active {
+            .btn:active,
+            .btn.is-active {
                 transform: translateY(4px);
                 box-shadow: 0 2px #b28b00;
             }
@@ -126,6 +127,24 @@
             const box = document.getElementById("notice-box");
             box.style.display = "block";
         }
+
+        // Make mobile taps trigger active style
+        document.addEventListener("DOMContentLoaded", function () {
+            const btn = document.querySelector(".btn");
+
+            btn.addEventListener("touchstart", function () {
+                btn.classList.add("is-active");
+            });
+
+            btn.addEventListener("touchend", function () {
+                btn.classList.remove("is-active");
+            });
+
+            // Just in case of cancelled tap (e.g., scrolling)
+            btn.addEventListener("touchcancel", function () {
+                btn.classList.remove("is-active");
+            });
+        });
     </script>
 </head>
 <body>
