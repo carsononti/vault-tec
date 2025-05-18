@@ -1,0 +1,142 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RAD-AWAY™ Dispensary Portal</title>
+    <!-- Google Fonts import for Press Start 2P -->
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        main {
+            flex: 1;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #141414; /* Dark background */
+            color: #f0f0f0;
+        }
+
+        header {
+            background-color: #005aa7;
+            color: #fff;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            color: #f7d038;
+            text-shadow: 1px 1px #000;
+        }
+
+        .tagline {
+            font-size: 1.2rem;
+            margin-top: 0.5rem;
+            font-style: italic;
+            color: #e0e0e0;
+        }
+
+        main {
+            padding: 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .terminal-font {
+            font-family: 'Courier New', Courier, monospace;
+            color: #39ff14; /* Neon green */
+            text-align: left;
+        }
+
+        .notice-box, .alert-box, .phone-call {
+            margin: 2rem auto;
+            padding: 1rem;
+            border-radius: 4px;
+            text-align: left;
+            max-width: 600px;
+        }
+
+        .notice-box {
+            background-color: #850404;
+            color: #ffbfbf;
+            border-left: 5px solid #f73838;
+            display: none;
+        }
+
+        .btn {
+            margin-top: 2rem;
+            padding: 12px 30px;
+            font-size: 1rem;
+            background-color: #f7d038;
+            color: #000;
+            border: none;
+            border-radius: 0; /* No rounding */
+            cursor: pointer;
+            box-shadow: 0 6px #b28b00;
+            transition: all 0.15s ease-in-out;
+            font-family: 'Press Start 2P', monospace;
+        }
+
+            .btn:hover {
+                background-color: #ffe066;
+            }
+
+            .btn:active {
+                transform: translateY(4px);
+                box-shadow: 0 2px #b28b00;
+            }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            font-size: 0.9rem;
+            background-color: #1a1a1a;
+            color: #ccc;
+            border-top: 1px solid #444;
+        }
+    </style>
+    <script>
+        function revealFinal() {
+            const box = document.getElementById("notice-box");
+            box.style.display = "block";
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <img src="https://preview.redd.it/a-basic-vault-tec-vault-boy-badge-i-made-years-ago-877x616-v0-dfdunqs9lgyc1.png?width=640&crop=smart&auto=webp&s=1e99e123d6fef39feb40c472e9852ba3794f6731"
+             alt="Vault Boy"
+             style="max-width: 300px; height: auto;" />
+        <h1>RAD-AWAY™ DISPENSARY</h1>
+        <div class="tagline">Vault-Tec approved. Wasteland ready. Radiation doesn’t stand a chance.</div>
+    </header>
+
+    <main>
+        <p class="terminal-font">*** VAULT-TEC INDUSTRIES TM ***</p>
+        <p class="terminal-font">Welcome to the official RAD-AWAY™ Dispensary Portal. Developed in cooperation with Vault-Tec’s medical division, RAD-AWAY™ is the safest and most effective solution for removing internal radiation exposure.</p>
+
+        <button class="btn" onclick="revealFinal()">Retrieve Your Rads!</button>
+
+        <div id="notice-box" class="notice-box">
+            <strong>SORRY!</strong> Due to an unfortunate increase in radiation-related mutations, RAD-AWAY™ has been temporarily restricted to authorized retrieval units. Please enter your Vault-Tec ID number before dialing to receive your dispatch coordinates.
+        </div>
+    </main>
+
+    <footer>
+        &copy; 2077 Vault-Tec Corporation. RAD-AWAY™ is a registered trademark. Not FDA approved.<br />
+        “Better Living, Underground.”
+    </footer>
+</body>
+</html>
